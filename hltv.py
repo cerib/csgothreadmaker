@@ -1,11 +1,11 @@
-link = "https://www.hltv.org/matches/2339092/faze-vs-nip-blast-premier-spring-series-2020"
+#link = "https://www.hltv.org/matches/2339092/faze-vs-nip-blast-premier-spring-series-2020"
+link = "https://www.hltv.org/matches/2336334/natus-vincere-vs-vitality-dreamhack-masters-malm-2019"
 
 
 from bs4 import BeautifulSoup
 import urllib3
 http = urllib3.PoolManager()
 
-#link = "https://www.hltv.org/matches/2336334/natus-vincere-vs-vitality-dreamhack-masters-malm-2019"
 page = http.request('GET', link)
 soup = BeautifulSoup(page.data, "html.parser")
 
@@ -38,13 +38,17 @@ print("|[](#" + teamA.lower() + "-logo)|**MAP**|[](#" + teamB.lower() + "-logo)|
 print("|:--:|:--:|:--:|")
 i = 0
 for veto in vetoesHtml[0].text.strip().split("\n"):
-  currentTeam = veto.split(" ")[1]
-  method = veto.split(" ")[2]
-  currentMap = veto.split(" ")[3].lower()
+  #currentTeam = veto.split(" ")[1]
+  test = " ".join(veto.replace("removed", "__").replace("picked", "__").split("__")[0].split(" ")[1:]).strip()
+  currentTeam = test
+  method = veto.split(" ")[-2]
+  currentMap = veto.split(" ")[-1].lower()
 
-  if currentMap == "left":
+  if currentMap == "over":
     currentMap = veto.split(" ")[1].lower()
-
+  #fix for when team has spaces in it
+  #if currentMap == "picked" or currentMap == "removed":
+  #  print(veto.split(" "))
   if method == "removed":
     if currentTeam == teamA:
       print("|**X**|[](#map-" + currentMap + ")||")
@@ -122,5 +126,5 @@ for stats in statsHtml:
   map_n += 1
 
 
-
-
+print("---\n&nbsp;\n---\n [Check out the HLTV match page](" + link + ")")
+print("\n[Made for r/GlobalOffensive with <3 Check out github by clicking here and help improve the project!](https://github.com/cerib/csgothreadmaker)")

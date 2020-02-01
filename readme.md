@@ -1,10 +1,10 @@
 # Required Software:
 1. Python3
-  1.1 On Windows I recommend installing it through chocolatey, check out https://chocolatey.org/install
-  1.2 After installing chocolatey, run this command on the terminal: choco install python3 --pre 
+  - On Windows I recommend installing it through chocolatey, check out https://chocolatey.org/install
+  - After installing chocolatey, run this command on the terminal: choco install python3 --pre 
 2. Install the following libraries: BeautifulSoup and urllib3
-  2.1 pip install beautifulsoup4
-  2.2 pip install urllib3
+  - pip install beautifulsoup4
+  - pip install urllib3
 
 # How to use:
 

@@ -1,8 +1,10 @@
+link = "https://www.hltv.org/matches/2339092/faze-vs-nip-blast-premier-spring-series-2020"
+
+
 from bs4 import BeautifulSoup
 import urllib3
 http = urllib3.PoolManager()
 
-link = "https://www.hltv.org/matches/2339092/faze-vs-nip-blast-premier-spring-series-2020"
 #link = "https://www.hltv.org/matches/2336334/natus-vincere-vs-vitality-dreamhack-masters-malm-2019"
 page = http.request('GET', link)
 soup = BeautifulSoup(page.data, "html.parser")

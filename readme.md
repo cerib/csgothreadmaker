@@ -14,4 +14,4 @@
 4. Copy and paste the console output
 # Notes:
 
-Early version, still very buggy.
+Early version, still very buggy. If the team name in the HLTV match page has spaces or special characters, the team icon will not be displayed correctly, and for now you'll have to find the correct name for it and replace it manually.

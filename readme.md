@@ -11,7 +11,7 @@
 1. Find the HLTV match page link. For example, https://www.hltv.org/matches/2339092/faze-vs-nip-blast-premier-spring-series-2020
 2. Navigate to the folder where you have hltv.py
 3. Run the script like this: **`python ./hltv.py https://www.hltv.org/matches/2339092/faze-vs-nip-blast-premier-spring-series-2020`**
-
+4. Copy and paste the console output
 # Notes:
 
 Early version, still very buggy.

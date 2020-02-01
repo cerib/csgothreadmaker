@@ -1,6 +1,15 @@
+import sys
 #link = "https://www.hltv.org/matches/2339092/faze-vs-nip-blast-premier-spring-series-2020"
-link = "https://www.hltv.org/matches/2336334/natus-vincere-vs-vitality-dreamhack-masters-malm-2019"
-
+#link = "https://www.hltv.org/matches/2336334/natus-vincere-vs-vitality-dreamhack-masters-malm-2019"
+link = ""
+if(len(sys.argv) > 1):
+  link = sys.argv[1]
+else:
+  print(sys.argv)
+  print("\n\nERROR: No link detected")
+  print("Please provide an HLTV match thread link when you run the script, like so: python ./hltv.py LINK")
+  print("--------------\n\n")
+  sys.exit()
 
 from bs4 import BeautifulSoup
 import urllib3

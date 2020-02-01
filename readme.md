@@ -8,11 +8,9 @@
 
 # How to use:
 
-1. Find the HLTV match page link
-2. At the top of the file there's a "link = ...." variable
-3. Change the existing example link for the one you want
-4. Save the file to hltv.py
-5. (Windows) Using the terminal, navigate to the folder where you have the file at, and run "python ./hltv.py"
+1. Find the HLTV match page link. For example, https://www.hltv.org/matches/2339092/faze-vs-nip-blast-premier-spring-series-2020
+2. Navigate to the folder where you have hltv.py
+3. Run the script like this: **python ./hltv.py https://www.hltv.org/matches/2339092/faze-vs-nip-blast-premier-spring-series-2020
 
 # Notes:
 
